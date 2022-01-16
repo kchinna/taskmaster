@@ -13,8 +13,8 @@ import { Container, Row, Col } from "react-bootstrap";
 
 const Dashboard = (props) => {
   const [task, setTask] = useState("");
-  const [todos, setTodos] = useState([]);
-  const [isEdit, setIsEdit] = useState(false);
+  const [tasks, setTasks] = useState([]);
+  const [edit, setEdit] = useState(false);
   const [tempUuid, setTempUuid] = useState("");
 
   const handleTaskChange = (e) => {
@@ -24,14 +24,14 @@ const Dashboard = (props) => {
   // read
   useEffect(() => {
     onValue(ref(db), (snapshot) => {
-      setTodos([]);
+      setTasks([]);
       const data = snapshot.val();
       if (data !== null) {
         // console.log(Object.values(data));
         Object.values(data).map((task) => {
           if (task.uid === props.uid) {
             // console.log("y");
-            setTodos((oldArray) => [...oldArray, task]);
+            setTasks((oldArray) => [...oldArray, task]);
           }
         });
       }
@@ -56,7 +56,7 @@ const Dashboard = (props) => {
 
   //update
   const handleUpdate = (task) => {
-    setIsEdit(true);
+    setEdit(true);
     setTempUuid(task.uuid);
     setTask(task.task);
   };
@@ -69,7 +69,7 @@ const Dashboard = (props) => {
     });
 
     setTask("");
-    setIsEdit(false);
+    setEdit(false);
   };
 
   //delete
@@ -94,7 +94,7 @@ const Dashboard = (props) => {
                 onChange={handleTaskChange}
               />
 
-              {isEdit ? (
+              {edit ? (
                 <div className="update">
                   <div className="edit-button" onClick={handleSubmitChange}>
                     edit
@@ -102,7 +102,7 @@ const Dashboard = (props) => {
                   <div
                     className="edit-button"
                     onClick={() => {
-                      setIsEdit(false);
+                      setEdit(false);
                       setTask("");
                     }}
                   >
@@ -132,7 +132,7 @@ const Dashboard = (props) => {
 
           <Col lg={8} md={6} className="col">
             <div className="tasks">
-              {todos.map((task) => (
+              {tasks.map((task) => (
                 <div className="task">
                   <p>{task.task}</p>
                   <div id="dashboard-edit-icons">
