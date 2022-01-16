@@ -1,0 +1,13 @@
+html {
+  --checkmark-color: lightgreen;
+}
+
+.checkmark {
+  color: var(--checkmark-color);
+  /* font-size: 2em; */
+}
+
+.checkmark:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}

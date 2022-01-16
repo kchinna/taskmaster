@@ -1,9 +1,12 @@
 import React from "react";
+import "./Sign-Out.css";
 
 const SignOut = (props) => {
   return (
     <div>
-      <button onClick={props.signout}>sign out</button>
+      <div className="add-button" onClick={props.signout}>
+        Sign Out
+      </div>
     </div>
   );
 };

@@ -1,0 +1,72 @@
+html {
+  --sign-in-card-color: #264653;
+  --sign-in-bg-color: #099a8c;
+  --sign-in-btn-color: #e6e7e8;
+  --sign-in-font-color: #e6e7e8;
+}
+
+#sign-in-page {
+  background-image: url(../../Images/bg2.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#sign-in-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(11px);
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  border-radius: 20px;
+}
+
+#sign-in-page-logo {
+  width: 125px;
+}
+
+#sign-in-title {
+  font-size: 75px;
+  padding: 0px;
+  margin: 0px;
+  color: var(--sign-in-font-color);
+  margin-bottom: 20px;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+#sign-in-btn {
+  width: 200px;
+  height: 50px;
+  border-radius: 15px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: transparent;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: var(--sign-in-btn-color);
+  color: var(--sign-in-card-color);
+  font-family: "Varela Round", sans-serif;
+}
+
+#sign-in-btn:hover {
+  cursor: pointer;
+  color: var(--sign-in-btn-color);
+  background-color: var(--sign-in-card-color);
+}
+
+@media (max-width: 540px) {
+  #sign-in-card {
+    width: 90%;
+    height: 70%;
+  }
+
+  #sign-in-title {
+    font-size: 60px;
+  }
+}

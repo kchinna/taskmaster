@@ -1,38 +1,133 @@
+html {
+  --font-color: #264653;
+  --btn-color: #e6e7e8;
+}
+
 .App {
-  text-align: center;
+  background-image: url("https://wallpaperaccess.com/full/84248.png");
+  background-image: url("https://free4kwallpapers.com/uploads/originals/2021/03/23/forest-landscape-px-wallpaper.jpg");
+  background-image: url("./Images/bg7.jpg");
+  /* background-position: center; */
+
+  background-size: cover;
+  padding: 0;
+  margin: 0;
+  min-height: 90vh;
+  font-family: "Source Serif Pro", serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.header {
+  width: 100%;
+  /* background: purple; */
+  background-color: #264653;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  height: 10vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  padding: 10px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.menu-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+html {
+  --button-color: red;
+  --header-bg-color: blue;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 90%;
+  margin: auto;
+  padding: 0;
+}
+
+.welcome {
+  font-size: 3em;
+  padding: 0;
+  margin: 0;
+  font-family: "Source Serif Pro", serif;
+  font-family: "Satisfy", cursive;
+  font-family: "The Nautigal", cursive;
+}
+
+/* .help-button,
+.signout-button {
+  background-color: #e6e7e8;
+  color: black;
+  font-size: 1.1em;
+  padding: 5px 10px;
+  margin: 0 10px;
+  border-radius: 5px;
+}
+
+.help-button:hover,
+.signout-button:hover {
+  cursor: pointer;
+} */
+
+.menu-items {
+  /* width: 30%; */
+}
+
+.signout-button {
+  /* width: 100%; */
+  text-align: center;
+  /* background: blue; */
+  /* padding: 8px 10px;
+  font-size: 1.5em;
+  border-radius: 5px; */
+  /* width: 200px;
+  height: 50px; */
+  padding: 0px 10px;
+
+  /* margin-top: 10px; */
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: transparent;
+  font-size: 1.5em;
+  font-weight: bold;
+  background-color: #264653;
+  color: #e6e7e8;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Source Serif Pro", serif;
+}
+
+.signout-button:hover {
+  cursor: pointer;
+  color: #264653;
+  background-color: #e6e7e8;
+}
+
+@media (max-width: 420px) {
+  .welcome {
+    font-size: 1.5em;
+    padding: 0;
+    margin: 0;
   }
-  to {
-    transform: rotate(360deg);
+
+  .signout-button {
+    font-size: 1em;
   }
 }

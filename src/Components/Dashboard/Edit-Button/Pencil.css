@@ -1,0 +1,14 @@
+html {
+  --pencil-color: white;
+}
+
+.pencil {
+  color: var(--pencil-color);
+  margin-right: 30px;
+  /* font-size: 2em; */
+}
+
+.pencil:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
