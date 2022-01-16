@@ -50,6 +50,7 @@ html {
   margin: 0;
   padding: 0;
   padding-bottom: 10px;
+  text-align: center;
 }
 
 .input {
@@ -185,9 +186,8 @@ html {
 }
 
 .help-section {
-  height: 40%;
   width: 100%;
-  padding: 5px;
+  padding: 15px;
   /* background: purple; */
   display: flex;
   justify-content: center;
@@ -234,8 +234,12 @@ html {
   height: 32px;
 }
 
-@media (max-width: 420px) {
-  .help-section {
-    height: 350px;
+@media (max-width: 800px) {
+  .add-text {
+    font-size: 1.5em;
+  }
+
+  .task > * {
+    font-size: 1.25em;
   }
 }

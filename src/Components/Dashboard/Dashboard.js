@@ -81,9 +81,9 @@ const Dashboard = (props) => {
     <div className="App">
       {/* <Header username={props.username} /> */}
       <div className="dashboard"></div>
-      <Container className="container">
+      <Container>
         <Row>
-          <Col lg={4}>
+          <Col lg={4} md={6} className="col">
             <div className="top">
               <p className="add-text">add or update a task!</p>
               <textarea
@@ -119,25 +119,18 @@ const Dashboard = (props) => {
             <div className="help-section">
               <p className="para">
                 Hello! We are excited for you to use Task Master! Here you can
-                keep track of all your tasks linked by your Google Account
+                keep track of all your tasks linked by your Google Account.
+                <br />
+                <br />
+                Press on the pencil to update a current task! Press on the
+                checkmark once you are done with a task! <br />
+                <br />
+                Created by Kanishk Chinna & Divyank Shah
               </p>
-              <div className="iconpara">
-                {/* <PencilSquare className="pencil-help" /> */}
-                <p className="para">
-                  Press on the pencil to update a current task!
-                </p>
-              </div>
-              <div className="iconpara">
-                {/* <CheckCircleFill className="check-help" /> */}
-                <p className="para">
-                  Press on the checkmark once you are done with a task!
-                </p>
-              </div>
-              <p className="para">Created by Kanishk Chinna and Divyank Shah</p>
             </div>
           </Col>
 
-          <Col lg={8}>
+          <Col lg={8} md={6} className="col">
             <div className="tasks">
               {todos.map((task) => (
                 <div className="task">
